@@ -4,12 +4,17 @@
   "author": "Vitaly Gashkov <vitalygashkov@vk.com>",
   "description": "Foresight Mobile Platform tools",
   "main": "fmptools.js",
+  "types": "types/fmptools.d.ts",
   "scripts": {
-    "test": "vitest"
+    "test": "vitest",
+    "types": "tsc -p types/tsconfig.json"
   },
   "keywords": [],
-  "license": "ISC",
+  "license": "GNU GPLv3",
   "devDependencies": {
+    "@types/node": "^20.6.0",
+    "eslint": "^8.49.0",
+    "prettier": "^3.0.3",
     "typescript": "^5.2.2",
     "vitest": "^0.34.4"
   }
