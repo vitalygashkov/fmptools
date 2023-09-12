@@ -1,0 +1,139 @@
+{
+  "ZFM_USERDATA": {
+    "id": 479,
+    "name": "ZFM_USERDATA",
+    "type": "tabular",
+    "input": {
+      "scalar": [
+        {
+          "id": 2171,
+          "name": "IV_USER_SNAME",
+          "type": "TEXT",
+          "source": {
+            "name": "SAP",
+            "type": "C"
+          }
+        },
+        {
+          "id": 2170,
+          "name": "IV_USER_PNAME",
+          "type": "TEXT",
+          "source": {
+            "name": "SAP",
+            "type": "C"
+          }
+        },
+        {
+          "id": 2169,
+          "name": "IV_USER_NAME",
+          "type": "TEXT",
+          "source": {
+            "name": "SAP",
+            "type": "C"
+          }
+        },
+        {
+          "id": 2168,
+          "name": "IV_PERNR",
+          "type": "TEXT",
+          "source": {
+            "name": "SAP",
+            "type": "N"
+          }
+        },
+        {
+          "id": 2167,
+          "name": "IV_ACTIVETIME",
+          "type": "TEXT",
+          "source": {
+            "name": "SAP",
+            "type": "T",
+            "format": "11:11:48"
+          }
+        },
+        {
+          "id": 2166,
+          "name": "IV_ACTIVEDATE",
+          "type": "TEXT",
+          "source": {
+            "name": "SAP",
+            "type": "D",
+            "format": "2023-09-12"
+          }
+        }
+      ],
+      "tabular": []
+    },
+    "output": [
+      {
+        "id": 1456,
+        "name": "ET_USERDATA",
+        "columns": [
+          {
+            "id": 11792,
+            "name": "UNAME",
+            "type": "TEXT",
+            "source": {
+              "name": "SAP",
+              "type": "C"
+            }
+          },
+          {
+            "id": 11793,
+            "name": "JOBNAME",
+            "type": "TEXT",
+            "source": {
+              "name": "SAP",
+              "type": "C"
+            }
+          },
+          {
+            "id": 11794,
+            "name": "PERNR",
+            "type": "TEXT",
+            "source": {
+              "name": "SAP",
+              "type": "N"
+            }
+          },
+          {
+            "id": 11795,
+            "name": "SWERK",
+            "type": "TEXT",
+            "source": {
+              "name": "SAP",
+              "type": "C"
+            }
+          },
+          {
+            "id": 11796,
+            "name": "BUKRS",
+            "type": "TEXT",
+            "source": {
+              "name": "SAP",
+              "type": "C"
+            }
+          },
+          {
+            "id": 11797,
+            "name": "ORGEH",
+            "type": "TEXT",
+            "source": {
+              "name": "SAP",
+              "type": "N"
+            }
+          },
+          {
+            "id": 11798,
+            "name": "STORT",
+            "type": "TEXT",
+            "source": {
+              "name": "SAP",
+              "type": "C"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}
