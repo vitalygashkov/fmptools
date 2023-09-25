@@ -2,7 +2,7 @@
   "name": "fmptools",
   "version": "0.0.4",
   "author": "Vitaly Gashkov <vitalygashkov@vk.com>",
-  "description": "Foresight Mobile Platform tools",
+  "description": "Foresight Mobile Platform utilities for web",
   "license": "GNU GPLv3",
   "keywords": [
     "fmp",
@@ -19,16 +19,10 @@
   },
   "main": "fmptools.js",
   "types": "types/fmptools.d.ts",
-  "funding": [
-    {
-      "type": "individual",
-      "url": "https://boosty.to/vitalygashkov/donate"
-    },
-    {
-      "type": "patreon",
-      "url": "https://www.patreon.com/vitalygashkov"
-    }
-  ],
+  "funding": {
+    "type": "patreon",
+    "url": "https://www.patreon.com/vitalygashkov"
+  },
   "scripts": {
     "test": "vitest",
     "types": "tsc -p types/tsconfig.json"
