@@ -19,6 +19,16 @@
   },
   "main": "fmptools.js",
   "types": "types/fmptools.d.ts",
+  "funding": [
+    {
+      "type": "individual",
+      "url": "https://boosty.to/vitalygashkov/donate"
+    },
+    {
+      "type": "patreon",
+      "url": "https://www.patreon.com/vitalygashkov"
+    }
+  ],
   "scripts": {
     "test": "vitest",
     "types": "tsc -p types/tsconfig.json"
