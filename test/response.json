@@ -1,0 +1,11 @@
+{
+  "request": {
+    "responseURL": "https://example.com/api/v1/rpc/ZFM_USERDATA/"
+  },
+  "data": [
+    {
+      "name": "ET_USERDATA",
+      "data": [["Ivan", "Seller", "007", "3000", "3000", "420", "141"]]
+    }
+  ]
+}
