@@ -1,16 +1,32 @@
 {
   "name": "fmptools",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": "Vitaly Gashkov <vitalygashkov@vk.com>",
   "description": "Foresight Mobile Platform tools",
+  "license": "GNU GPLv3",
+  "keywords": [
+    "fmp",
+    "foresight"
+  ],
+  "readmeFilename": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vitalygashkov/fmptools"
+  },
+  "bugs": {
+    "url": "https://github.com/vitalygashkov/fmptools/issues",
+    "email": "vitalygashkov@vk.com"
+  },
   "main": "fmptools.js",
   "types": "types/fmptools.d.ts",
   "scripts": {
     "test": "vitest",
     "types": "tsc -p types/tsconfig.json"
   },
-  "keywords": [],
-  "license": "GNU GPLv3",
+  "files": [
+    "lib/",
+    "types/"
+  ],
   "devDependencies": {
     "@types/node": "^20.6.0",
     "eslint": "^8.49.0",
