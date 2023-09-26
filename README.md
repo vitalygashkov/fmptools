@@ -14,7 +14,7 @@ npm i fmptools
 
 ### Usage
 
-Use Axios interceptors to modify response and/or request data:
+Use Axios interceptors to convert response and/or request data automatically for all FMP requests:
 
 ```javascript
 import axios from 'axios';
