@@ -21,4 +21,8 @@ export function createInterceptor(
  * @param resource - FMP resource name (for example: `ZFM_USERDATA`)
  * @returns parsed data
  */
-export function parseResponse<T>(data: any, schema: Record<string, unknown>, resource: string): T;
+export function convertResponseData<T>(
+  data: any,
+  schema: Record<string, unknown>,
+  resource: string
+): T;

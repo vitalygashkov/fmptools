@@ -16,31 +16,60 @@ npm i fmptools
 
 ### Usage
 
-Modify response data via Axios interceptor:
+Use Axios interceptors to modify response and/or request data:
 
 ```javascript
 import axios from 'axios';
-import { createInterceptor } from 'fmptools';
+import { createRequestInterceptor, createResponseInterceptor } from 'fmptools';
 
-const { data: schema } = await axios.get('https://example.com/api/v1/schema');
+const http = axios.create();
 
-const interceptor = createInterceptor(schema);
-const axiosInstance = axios.create();
+const init = async () => {
+  const { data: schema } = await http.get('https://example.com/api/v1/schema');
 
-axiosInstance.interceptors.response.use(interceptor);
+  const requestInterceptor = createRequestInterceptor(schema);
+  http.interceptors.request.use(requestInterceptor);
 
-const { data: result } = await axiosInstance.get(`https://example.com/api/v1/rpc/ZFM_USERDATA/`);
+  const responseInterceptor = createResponseInterceptor(schema);
+  http.interceptors.response.use(responseInterceptor);
+};
+
+const makeRequest = async () => {
+  const url = 'https://example.com/api/v1/rpc/ZFM_USERDATA/';
+  const { data: responseData } = await http.post(url);
+  return responseData;
+};
 ```
 
-Parse response data manually:
+Or parse response data manually:
 
 ```javascript
 import axios from 'axios';
-import { parseResponse } from 'fmptools';
+import { convertRequestData, convertResponseData } from 'fmptools';
 
-const { data: schema } = await axios.get('https://example.com/api/v1/schema');
+const makeRequest = async () => {
+  const { data: schema } = await axios.get('https://example.com/api/v1/schema');
 
-const resource = 'ZFM_USERDATA';
-const { data } = await axios.get(`https://example.com/api/v1/rpc/${resource}/`);
-const result = parseResponse(data, schema, resource);
+  const resource = 'ZFM_CREATE_TASK';
+  const requestData = {
+    IT_DATA: [
+      {
+        TITLE: 'Task #1',
+        USERID: 1,
+        DATE: '2023-09-26',
+        TIME: '06:48:17',
+        EMAIL: 'example1@mail.com',
+      },
+    ],
+  };
+  /* Table entities will be converted to rows as arrays
+   * IT_DATA: [['Task #1', 1, '2023-09-26', '06:48:17', 'example1@mail.com']]
+   */
+  const requestDataConverted = convertRequestData(requestData, schema, resource);
+  const url = `https://example.com/api/v1/rpc/${resource}/`;
+  const options = { data: requestDataConverted };
+  const { data } = await axios.post(url, options);
+  const responseData = convertResponseData(data, schema, resource);
+  return responseData;
+};
 ```

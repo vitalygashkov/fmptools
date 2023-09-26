@@ -1,2 +1,2 @@
-export { parseResponse } from './lib/parser';
-export { createInterceptor } from './lib/interceptor';
+export { convertRequestData, convertResponseData } from './lib/converter';
+export { createRequestInterceptor, createResponseInterceptor } from './lib/interceptor';

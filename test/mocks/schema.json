@@ -135,5 +135,94 @@
         ]
       }
     ]
+  },
+  "ZFM_CREATE_TASK": {
+    "id": 487,
+    "name": "ZFM_CREATE_TASK",
+    "type": "tabular",
+    "input": {
+      "scalar": [],
+      "tabular": [
+        {
+          "id": 584,
+          "name": "IT_DATA",
+          "columns": [
+            {
+              "id": 13802,
+              "name": "TITLE",
+              "type": "TEXT",
+              "source": {
+                "name": "SAP",
+                "type": "C"
+              }
+            },
+            {
+              "id": 13806,
+              "name": "USERID",
+              "type": "TEXT",
+              "source": {
+                "name": "SAP",
+                "type": "N"
+              }
+            },
+            {
+              "id": 13807,
+              "name": "DATE",
+              "type": "TEXT",
+              "source": {
+                "name": "SAP",
+                "type": "D",
+                "format": "2023-09-26"
+              }
+            },
+            {
+              "id": 13808,
+              "name": "TIME",
+              "type": "TEXT",
+              "source": {
+                "name": "SAP",
+                "type": "T",
+                "format": "06:48:17"
+              }
+            },
+            {
+              "id": 13814,
+              "name": "EMAIL",
+              "type": "TEXT",
+              "source": {
+                "name": "SAP",
+                "type": "C"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "output": [
+      {
+        "id": 1664,
+        "name": "ET_RETURN",
+        "columns": [
+          {
+            "id": 13816,
+            "name": "RETCODE",
+            "type": "BIGINT",
+            "source": {
+              "name": "SAP",
+              "type": "b"
+            }
+          },
+          {
+            "id": 13817,
+            "name": "ERROR_TEXT",
+            "type": "TEXT",
+            "source": {
+              "name": "SAP",
+              "type": "C"
+            }
+          }
+        ]
+      }
+    ]
   }
 }

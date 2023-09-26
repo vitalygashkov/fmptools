@@ -1,0 +1,18 @@
+{
+  "IT_DATA": [
+    {
+      "TITLE": "Task #1",
+      "USERID": 1,
+      "DATE": "2023-09-26",
+      "TIME": "06:48:17",
+      "EMAIL": "example1@mail.com"
+    },
+    {
+      "TITLE": "Task #2",
+      "USERID": 2,
+      "DATE": "2023-09-27",
+      "TIME": "07:49:18",
+      "EMAIL": "example2@mail.com"
+    }
+  ]
+}

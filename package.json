@@ -1,6 +1,6 @@
 {
   "name": "fmptools",
-  "version": "0.0.4",
+  "version": "0.1.0",
   "author": "Vitaly Gashkov <vitalygashkov@vk.com>",
   "description": "Foresight Mobile Platform utilities for web",
   "license": "GNU GPLv3",
