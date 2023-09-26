@@ -4,9 +4,7 @@
   <a href="https://www.npmjs.com/package/fmptools"><img alt="npm-downloads-badge" src="https://img.shields.io/npm/dt/fmptools.svg" height="20"></a>
   <a href="https://github.com/vitalygashkov/fmptools/blob/master/LICENSE"><img src="https://img.shields.io/npm/l/fmptools" alt="license-badge" height="20"></a>
 </h1>
-<h4 align="center">
-	fmptools is a set of <a href="https://www.fsight.ru/en/mobile-platform/" title="Foresight Mobile Platform">FMP</a> utilities for use on the web
-</h4>
+<h4 align="center">fmptools is a set of <a href="https://www.fsight.ru/en/mobile-platform/" title="Foresight Mobile Platform">FMP</a> utilities for use on the web</h4>
 
 ### Install
 
@@ -41,7 +39,7 @@ const makeRequest = async () => {
 };
 ```
 
-Or parse response data manually:
+Or convert response/request data manually:
 
 ```javascript
 import axios from 'axios';
