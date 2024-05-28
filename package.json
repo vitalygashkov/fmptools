@@ -1,6 +1,6 @@
 {
   "name": "fmptools",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "author": "Vitaly Gashkov <vitalygashkov@vk.com>",
   "description": "Foresight Mobile Platform utilities for web",
   "license": "GNU GPLv3",
@@ -32,10 +32,10 @@
     "types/"
   ],
   "devDependencies": {
-    "@types/node": "^20.6.0",
+    "@types/node": "^20.12.12",
     "eslint": "^8.49.0",
-    "prettier": "^3.0.3",
-    "typescript": "^5.2.2",
-    "vitest": "^0.34.4"
+    "prettier": "^3.2.5",
+    "typescript": "^5.4.5",
+    "vitest": "^1.6.0"
   }
 }
