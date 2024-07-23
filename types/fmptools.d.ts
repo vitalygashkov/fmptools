@@ -1,3 +1,5 @@
+import { InternalAxiosRequestConfig } from 'axios';
+
 interface Request {
   data: any;
   url: string;
@@ -17,7 +19,9 @@ interface Response {
  */
 export function createRequestInterceptor(
   schema: Record<string, unknown>
-): (value: Request) => Request | Promise<Request>;
+): (
+  value: InternalAxiosRequestConfig<any>
+) => InternalAxiosRequestConfig<any> | Promise<InternalAxiosRequestConfig<any>>;
 
 /**
  * Create response interceptor to convert response data
@@ -26,7 +30,7 @@ export function createRequestInterceptor(
  */
 export function createResponseInterceptor(
   schema: Record<string, unknown>
-): (value: Response) => Response | Promise<Response>;
+): (value: AxiosResponse<any, any>) => AxiosResponse<any, any> | Promise<AxiosResponse<any, any>>;
 
 /**
  * Convert request data to FMP format (table entities as arrays)
@@ -35,11 +39,7 @@ export function createResponseInterceptor(
  * @param resource - FMP resource name (for example: `ZFM_USERDATA`)
  * @returns parsed data
  */
-export function convertRequestData<T>(
-  data: any,
-  schema: Record<string, unknown>,
-  resource: string
-): T;
+export function convertRequestData<T>(data: any, schema: Record<string, unknown>, resource: string): T;
 
 /**
  * Convert response data to human readable object
@@ -48,8 +48,4 @@ export function convertRequestData<T>(
  * @param resource - FMP resource name (for example: `ZFM_USERDATA`)
  * @returns parsed data
  */
-export function convertResponseData<T>(
-  data: any,
-  schema: Record<string, unknown>,
-  resource: string
-): T;
+export function convertResponseData<T>(data: any, schema: Record<string, unknown>, resource: string): T;

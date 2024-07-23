@@ -1,8 +1,8 @@
 {
   "name": "fmptools",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "author": "Vitaly Gashkov <vitalygashkov@vk.com>",
-  "description": "Foresight Mobile Platform utilities for web",
+  "description": "Transform Foresight Mobile Platform RPC requests",
   "license": "GNU GPLv3",
   "keywords": [
     "fmp",
@@ -33,6 +33,7 @@
   ],
   "devDependencies": {
     "@types/node": "^20.12.12",
+    "axios": "^1.7.2",
     "eslint": "^8.49.0",
     "prettier": "^3.2.5",
     "typescript": "^5.4.5",
