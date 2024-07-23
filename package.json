@@ -1,6 +1,6 @@
 {
   "name": "fmptools",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "author": "Vitaly Gashkov <vitalygashkov@vk.com>",
   "description": "Transform Foresight Mobile Platform RPC requests",
   "license": "GNU GPLv3",
