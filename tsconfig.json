@@ -3,7 +3,8 @@
     "target": "ESNext",
     "moduleResolution": "node",
     "strict": true,
-    "baseUrl": ".",
+    "declaration": true,
+    "baseUrl": "./types",
     "preserveWatchOutput": true,
     "skipLibCheck": true
   },

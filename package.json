@@ -1,6 +1,6 @@
 {
   "name": "fmptools",
-  "version": "0.1.9",
+  "version": "0.1.10",
   "author": "Vitaly Gashkov <vitalygashkov@vk.com>",
   "description": "Transform Foresight Mobile Platform RPC requests",
   "license": "GNU GPLv3",
@@ -17,7 +17,7 @@
     "url": "https://github.com/vitalygashkov/fmptools/issues",
     "email": "vitalygashkov@vk.com"
   },
-  "main": "fmptools.js",
+  "main": "fmptools.ts",
   "types": "types/fmptools.d.ts",
   "funding": {
     "type": "patreon",
@@ -25,7 +25,7 @@
   },
   "scripts": {
     "test": "vitest",
-    "types": "tsc -p types/tsconfig.json"
+    "types": "tsc -p tsconfig.json"
   },
   "files": [
     "lib/",
@@ -37,6 +37,6 @@
     "eslint": "^8.49.0",
     "prettier": "^3.2.5",
     "typescript": "^5.4.5",
-    "vitest": "^1.6.0"
+    "vitest": "^3.0.7"
   }
 }
