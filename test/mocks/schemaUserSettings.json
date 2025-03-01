@@ -1,0 +1,47 @@
+{
+  "USER_SETTINGS": {
+    "id": 372,
+    "name": "USER_SETTINGS",
+    "type": "tabular",
+    "input": {
+      "scalar": [
+        {
+          "id": 2356,
+          "name": "@in_User",
+          "type": "TEXT",
+          "source": {
+            "name": "SQL_SERVER",
+            "type": "nvarchar"
+          }
+        }
+      ],
+      "tabular": []
+    },
+    "output": [
+      {
+        "id": 870,
+        "name": "output_table",
+        "columns": [
+          {
+            "id": 11397,
+            "name": "Name",
+            "type": "TEXT",
+            "source": {
+              "name": "SQL_SERVER",
+              "type": "nvarchar"
+            }
+          },
+          {
+            "id": 11398,
+            "name": "Value",
+            "type": "TEXT",
+            "source": {
+              "name": "SQL_SERVER",
+              "type": "nvarchar"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

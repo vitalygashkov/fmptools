@@ -4,6 +4,8 @@ import { createRequestInterceptor, createResponseInterceptor } from '../lib/inte
 const schema = require('./mocks/schema.json');
 const response = require('./mocks/response.json');
 const request = require('./mocks/request.json');
+const schemaUserSettings = require('./mocks/schemaUserSettings.json');
+const requestUserSettings = require('./mocks/requestUserSettings.json');
 
 const tablesCount = 1; // ET_USERDATA
 const usersCount = 1;
@@ -22,11 +24,22 @@ test('request interceptor', () => {
   expect(row2.length).toBe(5);
 });
 
+test('request interceptor 2', () => {
+  const requestInterceptor = createRequestInterceptor(schemaUserSettings);
+  const result = requestInterceptor(requestUserSettings);
+  const row1 = result?.data['@in_User'];
+
+  expect(Object.keys(result?.data).length).toBe(1);
+  expect(row1).toBeTruthy();
+  expect(row1.length).toBe(36);
+});
+
 test('response interceptor', () => {
   const responseInterceptor = createResponseInterceptor(schema);
   const result = responseInterceptor(response);
   const { ET_USERDATA } = result?.data;
   const user = ET_USERDATA.at(0);
+
   expect(Object.keys(result.data).length).toBe(tablesCount);
   expect(ET_USERDATA.length).toBe(usersCount);
   expect(Object.keys(user).length).toBe(columnCount);

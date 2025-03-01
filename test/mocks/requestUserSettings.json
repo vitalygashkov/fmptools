@@ -1,0 +1,6 @@
+{
+  "url": "https://example.com/api/v1/rpc/USER_SETTINGS/",
+  "data": {
+    "@in_User": "00000000-0000-0000-0000-000000000000"
+  }
+}
