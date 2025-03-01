@@ -1,16 +1,7 @@
-import { InternalAxiosRequestConfig } from 'axios';
-
-interface Request {
-  data: any;
-  url: string;
-}
-
-interface Response {
-  data: any;
-  request: {
-    responseURL: string;
-  };
-}
+import {AxiosResponse, InternalAxiosRequestConfig} from 'axios';
+import { RequestDataType, SchemaRawDataType } from './SchemaRawDataType';
+import { SchemaType } from './SchemaType';
+import { SchemaResponseItemType, SchemaResponseType } from './SchemaResponseType';
 
 /**
  * Create request interceptor to convert request data
@@ -39,7 +30,7 @@ export function createResponseInterceptor(
  * @param resource - FMP resource name (for example: `ZFM_USERDATA`)
  * @returns parsed data
  */
-export function convertRequestData<T>(data: any, schema: Record<string, unknown>, resource: string): T;
+export function convertRequestData<T>(data: SchemaRawDataType[], schema: SchemaType, resource: string): T;
 
 /**
  * Convert response data to human readable object
@@ -48,4 +39,6 @@ export function convertRequestData<T>(data: any, schema: Record<string, unknown>
  * @param resource - FMP resource name (for example: `ZFM_USERDATA`)
  * @returns parsed data
  */
-export function convertResponseData<T>(data: any, schema: Record<string, unknown>, resource: string): T;
+export function convertResponseData<T>(data: SchemaRawDataType[], schema: SchemaType, resource: string): T;
+
+export type { RequestDataType, SchemaRawDataType, SchemaType, SchemaResponseItemType, SchemaResponseType };
